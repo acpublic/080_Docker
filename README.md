@@ -48,7 +48,8 @@ ii docker-scan-plugin 0.17.0~ubuntu-jammy amd64 Docker scan cli plugin.
 # docker --version
 -bash: /usr/bin/docker: そのようなファイルやディレクトリはありません
 ```
-
+## 使用例
+https://qiita.com/ryome/items/ab23eeadf3c2ff6b35bd
 
 ## Windows + WSL + docker + gitlab
 https://qiita.com/magiclib/items/d0ec68886aead86ad510
