@@ -29,6 +29,9 @@ gusachan@shop:~$ docker compose version
 Docker Compose version v2.28.1
 ```
 
+## コマンド
+https://zenn.dev/en2enzo2/articles/95b73cacfe0eb1
+
 ## Ubuntu アンインストール
 https://arkgame.com/2022/05/14/post-308016/
 ```
