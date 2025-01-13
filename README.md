@@ -2,6 +2,29 @@ https://docs.docker.com/
 
 https://docs.docker.jp/index.html#
 
+## コマンド
+https://zenn.dev/en2enzo2/articles/95b73cacfe0eb1
+
+## Dockerfile
+### 
+
+## イメージ作成
+```
+$ docker build -t ubuntu-image:1.0 .
+$ docker images
+```
+
+## コンテナ作成
+```
+$ docker container run -itd --name ubuntu ubuntu-image:1.0
+$ docker ps
+```
+
+## コンテナに入る
+```
+$ docker container exec -it ubuntu /bin/bash
+```
+
 ## インストール
 https://www.stuffy.site/computers/archives/12082
 ```
@@ -31,9 +54,6 @@ Docker Compose version v2.28.1
 ＄sudo usermod -aG docker $USER
 ```
 
-## コマンド
-https://zenn.dev/en2enzo2/articles/95b73cacfe0eb1
-
 ## Ubuntu アンインストール
 https://arkgame.com/2022/05/14/post-308016/
 ```
@@ -55,6 +75,7 @@ ii docker-scan-plugin 0.17.0~ubuntu-jammy amd64 Docker scan cli plugin.
 ```
 ## 使用例
 https://qiita.com/ryome/items/ab23eeadf3c2ff6b35bd
+https://zenn.dev/trailer/articles/5348cf57403acd
 
 ## Windows + WSL + docker + gitlab
 https://qiita.com/magiclib/items/d0ec68886aead86ad510
