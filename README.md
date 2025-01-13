@@ -6,7 +6,12 @@ https://docs.docker.jp/index.html#
 https://zenn.dev/en2enzo2/articles/95b73cacfe0eb1
 
 ## Dockerfile
-### 
+###  Dockerfile例
+```
+FROM ubuntu:23.10
+RUN apt update
+RUN apt -y install python3
+```
 
 ## イメージ作成
 ```
