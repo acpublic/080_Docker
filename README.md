@@ -25,8 +25,10 @@ $ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugi
 
 4．docker compose のバージョン確認
 
-gusachan@shop:~$ docker compose version
+$ docker compose version
 Docker Compose version v2.28.1
+
+＄sudo usermod -aG docker $USER
 ```
 
 ## コマンド
