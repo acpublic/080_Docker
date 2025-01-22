@@ -30,6 +30,37 @@ $ docker ps
 $ docker container exec -it ubuntu /bin/bash
 ```
 
+## Django
+https://docs.docker.jp/compose/django.html
+
+### Dockerfile
+```
+FROM python:3
+ENV PYTHONUNBUFFERED 1
+RUN mkdir /code
+WORKDIR /code
+ADD requirements.txt /code/
+RUN pip install -r requirements.txt
+ADD . /code/
+```
+### docker-compose.yml
+```
+version: '3'
+
+services:
+  db:
+    image: postgres
+  web:
+    build: .
+    command: python3 manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+```
+
 ## インストール
 https://www.stuffy.site/computers/archives/12082
 ```
