@@ -32,6 +32,10 @@ $ docker container exec -it ubuntu /bin/bash
 
 ## Django
 https://docs.docker.jp/compose/django.html
+```
+ModuleNotFoundError: No module named 'django.utils.six.moves'
+$ sudo docker-compose build
+```
 
 ### Dockerfile
 ```
