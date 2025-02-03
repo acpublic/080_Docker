@@ -31,7 +31,7 @@ $ docker container exec -it ubuntu /bin/bash
 ```
 
 ## Django
-https://docs.docker.jp/compose/django.html
+https://matsuand.github.io/docs.docker.jp.onthefly/samples/django/
 ```
 ModuleNotFoundError: No module named 'django.utils.six.moves'
 $ sudo docker-compose build
@@ -39,28 +39,39 @@ $ sudo docker-compose build
 
 ### Dockerfile
 ```
+# syntax=docker/dockerfile:1
 FROM python:3
-ENV PYTHONUNBUFFERED 1
-RUN mkdir /code
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
 WORKDIR /code
-ADD requirements.txt /code/
+COPY requirements.txt /code/
 RUN pip install -r requirements.txt
-ADD . /code/
+COPY . /code/
 ```
 ### docker-compose.yml
 ```
-version: '3'
+version: "3.9"
 
 services:
   db:
     image: postgres
+    volumes:
+      - ./data/db:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
   web:
     build: .
-    command: python3 manage.py runserver 0.0.0.0:8000
+    command: python manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/code
     ports:
       - "8000:8000"
+    environment:
+      - POSTGRES_NAME=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
     depends_on:
       - db
 ```
