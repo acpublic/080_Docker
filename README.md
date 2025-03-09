@@ -45,6 +45,11 @@ docker ps -a
 docker start <コンテナIDまたはコンテナ名>
 ```
 
+## コンテナを停止
+```
+docker stop <コンテナIDまたはコンテナ名>
+```
+
 ## コンテナに入る
 ```
 docker container exec -it ubuntu /bin/bash
