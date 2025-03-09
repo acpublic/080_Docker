@@ -15,66 +15,41 @@ RUN apt -y install python3
 
 ## イメージ作成
 ```
-$ docker build -t ubuntu-image:1.0 .
-$ docker images
+docker build -t ubuntu-image:1.0 .
+docker images
 ```
 
 ## コンテナ作成
 ```
-$ docker container run -itd --name ubuntu ubuntu-image:1.0
-$ docker ps
+docker container run -itd --name ubuntu ubuntu-image:1.0
+docker ps
+```
+
+## Dockerイメージを表示
+```
+docker images
+```
+
+##  実行中のコンテナを表示
+```
+docker ps
+```
+
+## すべてのコンテナを表示（停止中のコンテナも含む）
+```
+docker ps -a
+```
+
+## 停止したコンテナを起動
+```
+docker start <コンテナIDまたはコンテナ名>
 ```
 
 ## コンテナに入る
 ```
-$ docker container exec -it ubuntu /bin/bash
+docker container exec -it ubuntu /bin/bash
 ```
 
-## Django
-https://matsuand.github.io/docs.docker.jp.onthefly/samples/django/
-```
-ModuleNotFoundError: No module named 'django.utils.six.moves'
-$ sudo docker-compose build
-```
-
-### Dockerfile
-```
-# syntax=docker/dockerfile:1
-FROM python:3
-ENV PYTHONDONTWRITEBYTECODE=1
-ENV PYTHONUNBUFFERED=1
-WORKDIR /code
-COPY requirements.txt /code/
-RUN pip install -r requirements.txt
-COPY . /code/
-```
-### docker-compose.yml
-```
-version: "3.9"
-
-services:
-  db:
-    image: postgres
-    volumes:
-      - ./data/db:/var/lib/postgresql/data
-    environment:
-      - POSTGRES_DB=postgres
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
-  web:
-    build: .
-    command: python manage.py runserver 0.0.0.0:8000
-    volumes:
-      - .:/code
-    ports:
-      - "8000:8000"
-    environment:
-      - POSTGRES_NAME=postgres
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
-    depends_on:
-      - db
-```
 
 ## インストール
 https://www.stuffy.site/computers/archives/12082
