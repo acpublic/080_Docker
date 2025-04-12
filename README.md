@@ -54,7 +54,10 @@ docker stop <コンテナIDまたはコンテナ名>
 ```
 docker container exec -it ubuntu /bin/bash
 ```
-
+## コンテナ内ログ
+```
+docker logs <container_id>
+```
 
 ## インストール
 https://www.stuffy.site/computers/archives/12082
