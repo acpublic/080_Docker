@@ -2,16 +2,31 @@ https://docs.docker.com/
 
 https://docs.docker.jp/index.html#
 
-## コマンド
-https://zenn.dev/en2enzo2/articles/95b73cacfe0eb1
+
 
 ## Dockerfile
-###  Dockerfile例
-```
-FROM ubuntu:23.10
-RUN apt update
-RUN apt -y install python3
-```
+### https://qiita.com/gon0821/items/f9e3bcbb6cb01d4ef7fa
+- FROM
+- RUN
+- CMD
+- COPY
+- ENV
+- WORKDIR
+
+## docker-compose.yml
+### https://qiita.com/gon0821/items/77369def082745d19c38
+- services
+- image
+- build
+- volumes
+- environment
+- ports
+- depends_on
+
+
+
+## コマンド
+https://zenn.dev/en2enzo2/articles/95b73cacfe0eb1
 
 ## イメージ作成
 ```
@@ -110,9 +125,6 @@ ii docker-scan-plugin 0.17.0~ubuntu-jammy amd64 Docker scan cli plugin.
 ## 使用例
 https://qiita.com/ryome/items/ab23eeadf3c2ff6b35bd
 https://zenn.dev/trailer/articles/5348cf57403acd
-
-## Docker + Python + Django
-https://qiita.com/a-im12/items/7f3c8d1212dac3685e77
 
 ## Windows + WSL + docker + gitlab
 https://qiita.com/magiclib/items/d0ec68886aead86ad510
