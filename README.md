@@ -1,8 +1,6 @@
-https://docs.docker.com/
-
-https://docs.docker.jp/index.html#
-
-
+## Dockerfile
+- https://docs.docker.com/
+- https://docs.docker.jp/index.html#
 
 ## Dockerfile
 ### https://qiita.com/gon0821/items/f9e3bcbb6cb01d4ef7fa
@@ -18,7 +16,7 @@ https://docs.docker.jp/index.html#
 - services
 - image
 - build
-- volumes
+- volumes :ファイルをリアルタイム共有。コンテナ内ファイルを残す。
 - environment
 - ports
 - depends_on
