@@ -29,13 +29,11 @@ https://zenn.dev/en2enzo2/articles/95b73cacfe0eb1
 ## イメージ作成
 ```
 docker build -t ubuntu-image:1.0 .
-docker images
 ```
 
 ## コンテナ作成
 ```
 docker container run -itd --name ubuntu ubuntu-image:1.0
-docker ps
 ```
 
 ## Dockerイメージを表示
