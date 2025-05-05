@@ -68,7 +68,7 @@ docker stop <コンテナIDまたはコンテナ名>
 
 ## コンテナに入る
 ```
-docker container exec -it ubuntu /bin/bash
+docker container exec -it <コンテナIDまたはコンテナ名> /bin/bash
 ```
 ## コンテナ内ログ
 ```
