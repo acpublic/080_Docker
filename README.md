@@ -33,7 +33,7 @@ docker build -t ubuntu-image:1.0 .
 
 ## コンテナ作成
 ```
-docker container run -itd --name ubuntu ubuntu-image:1.0
+docker container run -itd --name <コンテナIDまたはコンテナ名> ubuntu-image:1.0
 ```
 
 ## Docker Composeで起動
