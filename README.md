@@ -36,6 +36,11 @@ docker build -t ubuntu-image:1.0 .
 docker container run -itd --name ubuntu ubuntu-image:1.0
 ```
 
+## Docker Composeで起動
+```
+docker-compose up -d --build
+```
+
 ## Dockerイメージを表示
 ```
 docker images
