@@ -15,7 +15,7 @@
 ### https://qiita.com/gon0821/items/77369def082745d19c38
 - services ：実行する各コンテナ（アプリケーション）を定義
 - image　：使用するDockerイメージ名を指定
-- build　：コンテナをビルドするための設定。Dockerfile のあるディレクトリなどを指定
+- build　：コンテナをビルドするための設定。Dockerfileのあるディレクトリなどを指定
 - volumes ：ホストマシンとコンテナ間でファイルやディレクトリを共有。永続データの保存
 - environment　：コンテナ内で使う環境変数を指定
 - ports　：ホストとコンテナ間のポートをマッピング
