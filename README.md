@@ -4,24 +4,22 @@
 
 ## Dockerfile
 ### https://qiita.com/gon0821/items/f9e3bcbb6cb01d4ef7fa
-- FROM
-- RUN
-- CMD
-- COPY
-- ENV
-- WORKDIR
+- FROM　：ベースとなるイメージを指定
+- RUN　：イメージ作成中にコマンドを実行
+- CMD　：コンテナ起動時に実行されるデフォルトのコマンドを指定
+- COPY　：ホスト側のファイルをイメージ内にコピー
+- ENV　：環境変数を設定（ビルド時および実行時に有効）
+- WORKDIR　：作業ディレクトリを指定
 
 ## docker-compose.yml
 ### https://qiita.com/gon0821/items/77369def082745d19c38
-- services
-- image
-- build
-- volumes :ファイルをリアルタイム共有。コンテナ内ファイルを残す。
-- environment
-- ports
-- depends_on
-
-
+- services ：実行する各コンテナ（アプリケーション）を定義
+- image　：使用するDockerイメージ名を指定
+- build　：コンテナをビルドするための設定。Dockerfile のあるディレクトリなどを指定
+- volumes ：ホストマシンとコンテナ間でファイルやディレクトリを共有。永続データの保存
+- environment　：コンテナ内で使う環境変数を指定
+- ports　：ホストとコンテナ間のポートをマッピング
+- depends_on　：他のサービスに依存していることを示す。起動順序を制御
 
 ## コマンド
 https://zenn.dev/en2enzo2/articles/95b73cacfe0eb1
